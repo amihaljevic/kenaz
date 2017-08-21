@@ -1,0 +1,30 @@
+{
+  "name": "kenaz",
+  "version": "1.0.0",
+  "description": "Imaginary news portal Kenaz",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amihaljevic/kenaz.git"
+  },
+  "author": "Andrea Mihaljević",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/amihaljevic/kenaz/issues"
+  },
+  "homepage": "https://github.com/amihaljevic/kenaz#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11"
+  }
+}

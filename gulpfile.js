@@ -7,21 +7,23 @@ var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var browsersync = require('browser-sync').create();
 var watch = require('gulp-watch');
+var sass = require('gulp-sass');
 
-gulp.task('css', function() {
-    return gulp.src('src/css/**')
+gulp.task('scss', function() {
+    return gulp.src('src/scss/base.scss')
+    .pipe(sass.sync())
     .pipe(autoprefixer({
         browsers: ['last 100 versions'],
         grid: true
     }))
-    .pipe(concat('style.bundle.css'))
+    //.pipe(rename('style.css'))
     .pipe(gulp.dest('dist/'))
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('bs-reload-css', ['css'], function(done) {
+gulp.task('bs-reload-scss', ['scss'], function(done) {
     browsersync.reload();
     done();
 });
@@ -58,11 +60,11 @@ gulp.task('bs', function() {
         }
     });
 
-    gulp.watch("src/css/**", ['bs-reload-css']);
+    gulp.watch("src/scss/**", ['bs-reload-scss']);
     gulp.watch("src/js/**", ['bs-reload-js']);
     gulp.watch("src/img/**", ['bs-reload-img']);
     gulp.watch("index.html").on("change", browsersync.reload);
 });
 
-gulp.task('default', ['css', 'js', 'img']);
-gulp.task('serve', ['css', 'js', 'img', 'bs']);
+gulp.task('default', ['scss', 'js', 'img']);
+gulp.task('serve', ['scss', 'js', 'img', 'bs']);

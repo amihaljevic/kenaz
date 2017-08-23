@@ -9,54 +9,98 @@
     <script src="dist/script.bundle.min.js"></script>
 </head>
 <body>
-    <header>
-        <ul>
-            <li></li>
+<div class="container">
+
+    <header class="header">
+        <ul class="header header__right">
+            <li>Media</li>
+            <li>Marketing</li>
+            <li>Contact</li>
         </ul>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+
+        <span class="magnifier-icon"></span>
     </header>
-        <nav>
-            <ul>
-                <li>News</li>
-                <li>Business</li>
-                <li>Sport</li>
-                <li>Life</li>
-                <li>Tech</li>
-                <li>Travel</li>
-            </ul>
-        </nav>
-    <main>
-        <section class="panel panel__news">
-            <article></article>
-            <article></article>
-            <article></article>
+
+    <nav class="navbar">
+        <ul>
+            <li class="navbar__news">News</li>
+            <li class="navbar__business">Business</li>
+            <li class="navbar__sport">Sport</li>
+            <li class="navbar__life">Life</li>
+            <li class="navbar__tech">Tech</li>
+            <li class="navbar__travel">Travel</li>
+        </ul>
+    </nav>
+
+    <main class="grid-container">
+
+        <div class="banner banner_size_l"></div>
+        <section class="carousel"></section>
+
+        <section class="main-left">
+
+            <section class="panel panel__news">
+                <h1>News</h1>
+                <article>
+                    <figure>
+                        <img src="dist/mountain-lake.jpg" alt="">
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="dist/mountain-lake.jpg" alt="">
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="dist/mountain-lake.jpg" alt="">
+                    </figure>
+                </article>
+            </section>
+
+            <section class="panel panel__sport">
+                <h1>Sport</h1>
+                <article></article>
+                <article></article>
+                <article></article>
+            </section>
+
+            <div class="banner banner_size_m"></div>
+
+            <section class="panel panel__business">
+                <h1>Business</h1>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+            </section>
+
+            <div class="banner banner_size_m"></div>
+
+            <section class="panel panel__news-carousel">
+                <h1>News Carousel</h1>
+                <article></article>
+                <article></article>
+            </section>
+
+            <section class="panel panel__small-carousel">
+                <h1>Editorials</h1>
+                <article></article>
+            </section>
+
+            <section class="panel panel__small-carousel">
+                <h1>Local News</h1>
+                <article></article>
+            </section>
+
         </section>
-        <section class="panel panel__sport">
-            <article></article>
-            <article></article>
-            <article></article>
-        </section>
-        <section class="panel panel__business">
-            <article></article>
-            <article></article>
-            <article></article>
-            <article></article>
-        </section>
-        <section class="panel panel__news-carousel">
-            <article></article>
-            <article></article>
-        </section>
-        <section class="panel panel__small-carousel">
-            <article></article>
-        </section>
-        <section class="panel panel__small-carousel">
-            <article></article>
-        </section>
+
+    <section class="main-right">
+
         <aside>
+
             <nav>
                 <ul>
                     <li>Popular</li>
@@ -64,14 +108,34 @@
                     <li>Comments</li>
                 </ul>
             </nav>
+
             <article></article>
             <article></article>
             <article></article>
             <article></article>
             <article></article>
+
+            <section class="social-aside"></section>
+
+            <section class="tv-aside"></section>
+
+            <section>
+                <article class="banner banner_size_s"></article>
+                <article class="banner banner_size_s"></article>
+            </section>
+
         </aside>
+
+    </section>
+
+    <section class="carousel"></section>
+
+    <div class="banner banner_size_l"></div>
+
     </main>
+
     <footer>
+
         <section></section>
         <section></section>
         <section></section>
@@ -80,5 +144,7 @@
 
 
     </footer>
+
+</div>
 </body>
 </html>

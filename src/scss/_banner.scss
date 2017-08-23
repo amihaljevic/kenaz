@@ -1,0 +1,8 @@
+// Banner properties
+// ===========================
+.banner {
+    @include grid-column(12);
+    height: 120px;
+    background-color: #fff;
+    border: 2px solid #eee;
+}

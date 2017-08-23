@@ -1,0 +1,38 @@
+// Panel properties
+// =====================================
+.panel {
+    @include grid-column(12);
+    background-color: #fff;
+    border-left-width: 10px;
+    border-left-style: solid;
+}
+
+.panel__news {
+    border-left-color: $color-news;
+}
+
+.panel__sport {
+    border-left-color: $color-sport;
+}
+
+.panel__business {
+    border-left-color: $color-business;
+}
+
+.panel__news-carousel {
+    border-left-color: $color-news-carousel;
+}
+
+.panel__small-carousel {
+    @include grid-column(6);
+    border-left-color: $color-small-carousel;
+}
+
+.panel article {
+    display: inline-block;
+    width: 30%;
+}
+
+.panel img {
+    width: 170px;
+}

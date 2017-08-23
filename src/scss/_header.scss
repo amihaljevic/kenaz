@@ -1,0 +1,42 @@
+.header {
+    //@include grid-column(12);
+    background-color: #252525;
+    color: #fff;
+    position: relative;
+    width: 100%;
+   // align-self: auto;
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: -100%;
+        background-color: #252525;
+    }
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+.header__right {
+    float: right;
+    margin: 0;
+}
+
+.header__right li {
+    display: block;
+    float: right;
+    padding: 20px;
+}
+
+.magnifier-icon::before {
+    content: url(/dist/magnifier-icon.png);
+    display: block;
+    float: right;
+    width: 100px;
+    height: 100px;
+}

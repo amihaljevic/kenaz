@@ -1,0 +1,39 @@
+@import "_vendor";
+@import "_variables";
+
+@import "_header";
+@import "_navbar";
+@import "_panel";
+@import "_banner";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    @include grid-container;
+}
+
+.main-left {
+    @include grid-column(8);
+    margin-left: 0;
+}
+.main-right {
+    @include grid-column(4);
+    margin-right: 0;
+}
+
+footer {
+    @include grid-column(12);
+}

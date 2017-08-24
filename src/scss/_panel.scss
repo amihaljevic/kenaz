@@ -5,6 +5,8 @@
     background-color: #fff;
     border-left-width: 10px;
     border-left-style: solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .panel__news {
@@ -30,9 +32,14 @@
 
 .panel article {
     display: inline-block;
-    width: 30%;
+    //width: 30%;
 }
 
 .panel img {
     width: 170px;
+}
+
+.panel h1 {
+    font-size: 1.5rem;
+    margin-left: 30px;
 }

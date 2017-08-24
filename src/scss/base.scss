@@ -1,5 +1,6 @@
 @import "_vendor";
 @import "_variables";
+@import "_fonts";
 
 @import "_header";
 @import "_navbar";
@@ -8,12 +9,20 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: #eee;
     overflow-x: hidden;
     margin: 0;
+    font-family: $font-family-1;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .container {
@@ -26,12 +35,11 @@ body {
 }
 
 .main-left {
-    @include grid-column(8);
-    margin-left: 0;
+    @include grid-column(8, (columns: 12, gutter: 0px));
+    
 }
 .main-right {
-    @include grid-column(4);
-    margin-right: 0;
+    @include grid-column(4, (columns: 12, gutter: 0px));
 }
 
 footer {

@@ -7,39 +7,143 @@
     border-left-style: solid;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding: 1.9rem;
 }
 
-.panel__news {
-    border-left-color: $color-news;
-}
+.panel__news { border-left-color: $color-news; }
 
-.panel__sport {
-    border-left-color: $color-sport;
-}
+.panel__sport { border-left-color: $color-sport; }
 
-.panel__business {
-    border-left-color: $color-business;
-}
+.panel__business { border-left-color: $color-business; }
 
-.panel__news-carousel {
-    border-left-color: $color-news-carousel;
-}
+.panel__news-carousel { border-left-color: $color-news-carousel; }
 
 .panel__small-carousel {
     @include grid-column(6);
     border-left-color: $color-small-carousel;
 }
 
-.panel article {
+.panel__item {
     display: inline-block;
-    //width: 30%;
+    width: 30.3%;
+    margin-left: 1.3rem;
+    vertical-align: top;
+    &:first-of-type {
+        margin-left: 0;
+    }
+}
+
+.panel__item_small {
+    display: inline-block;
+    width: 48.18%;
+    margin-left: 1rem;
+    vertical-align: top;
+    &:nth-child(2n) {
+        margin-left: 0;
+    }
+}
+
+.panel__item_carousel {
+    display: inline-block;
+    width: 46%;
+    //margin-left: 2rem;
+    vertical-align: top;
+    &:first-of-type {
+        margin-left: 0;
+    }
+    //neće valjat kasnije
+    &:last-of-type {
+        float: right;
+    }
+}
+
+.panel__item_small figure {
+    width: 48%;
+    height: 90px;
+    position: relative;
+    float: left;
+    overflow: hidden;
 }
 
 .panel img {
-    width: 170px;
+    width: 100%;
+    margin-bottom: 5%;
 }
 
 .panel h1 {
     font-size: 1.5rem;
-    margin-left: 30px;
+    margin-bottom: 1.9rem;
+    position: relative;
 }
+
+.panel h2 {
+    font-size: .9rem;
+    clear: both;
+    margin-top: 1rem;
+    white-space: normal;
+}
+
+.panel a {
+    color: #3677b5;
+    font-family: $font-family-2;
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);    
+}
+
+.panel__item_date, .panel__item_comment {
+    font-family: $font-family-2;
+    font-size: .75rem;
+    color: #7a7a7a;
+    display: inline-block;
+    clear: both;
+}
+
+.panel__item_date { float: left; }
+
+.panel__item_comment {
+   float: right;
+   clear: right;
+}
+
+.comment-icon::before { content: url(/dist/comment-icon.png); }
+
+.panel__item_small img {
+    width: auto;
+    height: 100%;
+    margin-bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.panel__item_info {
+    width: 48%;
+    float: right;
+}
+
+.left-arrow-yellow::before { content: url(/dist/left-arrow-yellow.png); }
+
+.right-arrow-yellow::before { content: url(/dist/right-arrow-yellow.png); }
+
+.left-arrow-brown::before { content: url(/dist/left-arrow-brown.png); }
+
+.right-arrow-brown::before { content: url(/dist/right-arrow-brown.png); }
+
+.panel__arrow_left {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+.panel__arrow_right {
+    position: absolute;
+    top: 49%;
+    right: 0;
+    transform: translateY(-51%);
+}
+
+.panel__small-carousel .panel__arrow_left { right: 10%; }

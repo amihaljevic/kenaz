@@ -1,7 +1,6 @@
 // Navigation bar properties
 // =================================
 .navbar {
-    //@include grid-column(12);
     width: 100%;
     height: 100%;
     background-color: #4d4382;
@@ -9,7 +8,6 @@
     position: relative;
     &:before {
         content: "";
-        //display: block;
         position: absolute;
         background-color: #4d4382;
         z-index: -1;
@@ -37,46 +35,39 @@
     padding: 20px;
     border-bottom-width: 5px;
     border-bottom-style: solid;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 .navbar__news {
     border-bottom-color: #299ec3;
-    &:hover {
-        background-color: #299ec3;
-    }
+    &:hover { background-color: #299ec3; }
 }
 
 .navbar__business {
     border-bottom-color: $color-business;
-    &:hover {
-        background-color: $color-business;
-    }
+    &:hover { background-color: $color-business; }
 }
 
 .navbar__sport {
     border-bottom-color: $color-sport;
-    &:hover {
-        background-color: $color-sport;
-    }
+    &:hover { background-color: $color-sport; }
 }
 
 .navbar__life {
     border-bottom-color: #5dcff3;
-    &:hover {
-        background-color: #5dcff3;
-    }
+    &:hover { background-color: #5dcff3; }
 }
 
 .navbar__tech {
     border-bottom-color: $color-news-carousel;
-    &:hover {
-        background-color: $color-news-carousel;
-    }
+    &:hover { background-color: $color-news-carousel; }
 }
 
 .navbar__travel {
     border-bottom-color: $color-small-carousel;
-    &:hover {
-        background-color: $color-small-carousel;
-    }
+    &:hover { background-color: $color-small-carousel; }
 }

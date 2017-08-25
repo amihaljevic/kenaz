@@ -44,6 +44,11 @@
     margin-left: 0.5rem;
 }
 
+.header a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .header__right {
     float: right;
     font-family: $font-family-2;
@@ -59,47 +64,9 @@
 }
 
 .magnifier-icon {
-    //margin-top: 10px;
     vertical-align: middle;
     background-color: #2f2f2f;
     &::before {
         content: url(/dist/magnifier-icon.png);
     }
 }
-
-/*
-.header__right li {
-    display: inline-block;
-    padding: 10px 20px 10px 20px;
-    font-size: 0.8rem;
-}
-
-.header__left li {
-    display: inline-block;
-    padding: 10px 20px 10px 0;
-    &:last-child {
-        font-family: $font-family-logo;
-        //font-size: 1.6rem;
-    }
-}
-
-.magnifier-icon {
-    //margin-top: 10px;
-    vertical-align: middle;
-    background-color: #2f2f2f;
-}
-
-.magnifier-icon::before {
-    content: url(/dist/magnifier-icon.png);
-}
-
-.logo-icon {
-    //margin-top: 10px;
-    vertical-align: middle;
-    background-color: #2f2f2f;
-}
-
-.logo-icon::before {
-    content: url(/dist/logo-icon.png);
-}
-*/

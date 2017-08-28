@@ -9,8 +9,18 @@
     <script src="dist/script.bundle.min.js"></script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+    (document, 'script', 'facebook-jssdk'));
+</script>
 <div class="container">
-
     <header class="header">
         <figure class="logo">
             <img src="dist/logo-icon.png" alt="Logo" />
@@ -22,9 +32,7 @@
             <li><a href="#">Contact</a></li>
             <li class="magnifier-icon"></li>
         </ul>
-
     </header>
-
     <nav class="navbar">
         <ul>
             <li class="navbar__news"><a href="#">News</a></li>
@@ -35,16 +43,11 @@
             <li class="navbar__travel"><a href="#">Travel</a></li>
         </ul>
     </nav>
-
     <main>
-
         <div class="banner banner_size_l"></div>
         <section class="carousel"></section>
-
         <section class="grid-container">
-
             <section class="main-left">
-    
                 <section class="panel panel__news">
                     <h1>News<a href="#">See all</a></h1>
                     <article class="panel__item">
@@ -54,8 +57,7 @@
                         <p class="panel__item_date">August 26, 2013</p>
                         <p class="panel__item_comment"><span class="comment-icon"></span> 14</p>
                         <h2>For Obama, MLS's shadow looms large ahead of speech aldghfladkfhglaynfva akfuylkjdf yaldfghbyasdf vyazudfbghyjadfv yfvabdfvkjhydfbgv ykjxbgfv</h2>
-                    </article>
-    
+                    </article>    
                     <article class="panel__item">
                         <figure>
                             <img src="dist/saturn.jpg" alt="">
@@ -64,7 +66,6 @@
                         <p class="panel__item_comment"><span class="comment-icon"></span> 22</p>
                         <h2>NASA releases portrait of a planet waving at Saturn</h2>
                     </article>
-    
                     <article class="panel__item">
                         <figure>
                             <img src="dist/mountain-lake.jpg" alt="">
@@ -74,7 +75,6 @@
                         <h2>Patriotsvv make cuts ... and Tim Tebow survives (so far)</h2>
                     </article>
                 </section>
-    
                 <section class="panel panel__sport">
                     <h1>Sport<a href="#">See all</a></h1>
                     <article class="panel__item">
@@ -84,7 +84,6 @@
                         <p class="panel__item_date">August 26, 2013</p>
                         <h2>For Obama, MLS's shadow looms large ahead of speech</h2>
                     </article>
-
                     <article class="panel__item">
                         <figure>
                             <img src="dist/mountain-lake.jpg" alt="">
@@ -92,7 +91,6 @@
                         <p class="panel__item_date">August 26, 2013</p>
                         <h2>For Obama, MLS's shadow looms large ahead of speech</h2>
                     </article>
-
                     <article class="panel__item">
                         <figure>
                             <img src="dist/mountain-lake.jpg" alt="">
@@ -101,9 +99,7 @@
                         <h2>For Obama, MLS's shadow looms large ahead of speech</h2>
                     </article>
                 </section>
-    
-                <div class="banner banner_size_m"></div>
-    
+                <div class="banner"></div>
                 <section class="panel panel__business">
                     <h1>Business<a href="#">See all</a></h1>
                     <article class="panel__item_small">
@@ -143,9 +139,7 @@
                         </section>
                     </article>
                 </section>
-    
-                <div class="banner banner_size_m"></div>
-    
+                <div class="banner"></div>
                 <section class="panel panel__news-carousel">
                     <h1>News Carousel<span class="panel__arrow_left left-arrow-yellow"></span><span class="panel__arrow_right right-arrow-yellow"></span></h1>
                     <article class="panel__item_carousel">
@@ -155,7 +149,6 @@
                         <p class="panel__item_date">August 26, 2013</p>
                         <h2>For Obama, MLS's shadow looms large ahead of speech</h2>
                     </article>
-
                     <article class="panel__item_carousel">
                         <figure>
                             <img src="dist/saturn.jpg" alt="">
@@ -164,7 +157,6 @@
                         <h2>NASA releases portrait of a planet waving at Saturn</h2>
                     </article>
                 </section>
-    
                 <section class="panel panel__small-carousel">
                     <h1>Editorials <span class="panel__arrow_left left-arrow-brown"></span><span class="panel__arrow_right right-arrow-brown"></span></h1>
                     <article>
@@ -175,7 +167,6 @@
                         <h2>For Obama, MLS's shadow looms large ahead of speech</h2>
                     </article>
                 </section>
-    
                 <section class="panel panel__small-carousel">
                     <h1>Local News<span class="panel__arrow_left left-arrow-brown"></span><span class="panel__arrow_right right-arrow-brown"></span></h1>
                     <article>
@@ -186,59 +177,117 @@
                         <h2>For Obama, MLS's shadow looms large ahead of speech</h2>
                     </article>
                 </section>
-    
             </section>
-    
             <section class="main-right">
-        
                 <aside>
-        
-                    <nav>
-                        <ul>
-                            <li>Popular</li>
-                            <li>Top Rated</li>
-                            <li>Comments</li>
-                        </ul>
-                    </nav>
-        
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-        
-                    <section class="social-aside"></section>
-        
-                    <section class="tv-aside"></section>
-        
-                    <section>
-                        <article class="banner banner_size_s"></article>
-                        <article class="banner banner_size_s"></article>
+                    <section class="aside__menu">
+                        <nav class="aside__navbar">
+                            <ul>
+                                <li><a href="#">Popular</a></li>
+                                <li><a href="#">Top Rated</a></li>
+                                <li><a href="#">Comments</a></li>
+                            </ul>
+                        </nav>            
+                        <article class="aside__menu_item">
+                            <section class="aside__menu_item_info">
+                                <p class="panel__item_date">August 26, 2013</p>
+                                <p class="panel__item_comment"><span class="comment-icon"></span> 5</p>
+                                <h2>Palesetinians call off peace talks after clash</h2>
+                            </section>
+                            <figure>
+                                <img src="dist/palestinians.jpg" alt="">
+                            </figure>
+                        </article>
+                        <article class="aside__menu_item">
+                            <section class="aside__menu_item_info">
+                                <p class="panel__item_date">August 26, 2013</p>
+                                <p class="panel__item_comment"><span class="comment-icon"></span> 5</p>
+                                <h2>Palesetinians call off peace talks after clash</h2>
+                            </section>
+                            <figure>
+                                <img src="dist/palestinians.jpg" alt="">
+                            </figure>
+                        </article>
+                        <article class="aside__menu_item">
+                            <section class="aside__menu_item_info">
+                                <p class="panel__item_date">August 26, 2013</p>
+                                <p class="panel__item_comment"><span class="comment-icon"></span> 5</p>
+                                <h2>Palesetinians call off peace talks after clash</h2>
+                            </section>
+                            <figure>
+                                <img src="dist/palestinians.jpg" alt="">
+                            </figure>
+                        </article>
+                        <article class="aside__menu_item">
+                            <section class="aside__menu_item_info">
+                                <p class="panel__item_date">August 26, 2013</p>
+                                <p class="panel__item_comment"><span class="comment-icon"></span> 5</p>
+                                <h2>Palesetinians call off peace talks after clash</h2>
+                            </section>
+                            <figure>
+                                <img src="dist/palestinians.jpg" alt="">
+                            </figure>
+                        </article>
+                        <article class="aside__menu_item">
+                            <section class="aside__menu_item_info">
+                                <p class="panel__item_date">August 26, 2013</p>
+                                <p class="panel__item_comment"><span class="comment-icon"></span> 5</p>
+                                <h2>Palesetinians call off peace talks after clash</h2>
+                            </section>
+                            <figure>
+                                <img src="dist/palestinians.jpg" alt="">
+                            </figure>
+                        </article>
                     </section>
-        
+                    <section class="aside__social">
+                        <h1>Social</h1>
+                        <ul>
+                            <li>
+                                <span class="facebook-transparent-icon"></span>
+                                <span>Like</span>
+                                <span>25041 Fans</span>
+                            </li>
+                            <li>
+                                <span class="twitter-transparent-icon"></span>
+                                <span>Follow</span>
+                                <span>25041 Followers</span>
+                            </li>
+                            <li>
+                                <span class="youtube-transparent-icon"></span>
+                                <span>Subscribe</span>
+                                <span>941 Subscribers</span>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="aside__tv">
+                        <h1>Kenaz TV</h1>
+                        <iframe src="https://player.vimeo.com/video/40237562" width="100%" height="150" frameborder="0" allowfullscreen></iframe>
+                        <p class="panel__item_date">August 26, 2013</p>
+                        <h2>NASA releases portrait of a planet waving at Saturn</h2>
+                    </section>
+                    <div class="banner__container">
+                        <div class="banner banner_size_s"></div>
+                        <div class="banner banner_size_s"></div>
+                    </div>
+                    <section>
+                        <div class="fb-page" data-href="https://www.facebook.com/envato" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/envato" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/envato">Envato</a>
+                            </blockquote>
+                        </div>
+                    </section>
                 </aside>
-        
             </section>
-
         </section>
-
     <section class="carousel"></section>
-
     <div class="banner banner_size_l"></div>
-
     </main>
-
     <footer>
-
         <section></section>
         <section></section>
         <section></section>
-
         <hr>
-
-
     </footer>
-
 </div>
 </body>
 </html>

@@ -6,6 +6,7 @@
 @import "_navbar";
 @import "_panel";
 @import "_banner";
+@import "_aside.scss";
 
 * {
     box-sizing: border-box;
@@ -36,6 +37,8 @@ body {
 }
 .main-right {
     @include grid-column(4, (columns: 12, gutter: 0px));
+    margin-left: -20px;
+    width: calc((4/12 * 100%) + 20px);
 }
 
 footer {

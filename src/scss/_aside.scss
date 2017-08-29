@@ -19,9 +19,7 @@
     display: inline-block;
     padding-right: 1.2rem;
     font-size: .9rem;
-    &:last-child {
-        padding-right: 0;
-    }
+    &:last-child { padding-right: 0; }
     a {
         color: #fff;
         text-decoration-color: #5e5a80;
@@ -55,9 +53,7 @@
         color: #fff;
         font-size: .9rem;
     }
-    p {
-        color: #a5abb6;
-    }
+    p { color: #a5abb6; }
 }
 
 .aside__menu_item figure {
@@ -116,9 +112,7 @@
             left: 0;
         }
     }
-    &:nth-child(n + 2) {
-        padding: 0 1rem;
-    }
+    &:nth-child(n + 2) { padding: 0 1rem; }
     &:nth-child(2) {
         background-color: #ddd;
         width: 50%;

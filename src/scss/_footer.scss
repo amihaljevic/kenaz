@@ -1,0 +1,101 @@
+footer {
+    @include grid-container;
+    @include grid-column(12);
+    background-color: #252525;
+    border-top: 20px solid #4d4382;
+    width: 100%;
+    margin-left: 0;
+    padding: 4.2rem 0;
+}
+
+.logo-black-icon { display: inline-block; }
+
+.footer__section {
+    @include grid-column(4);
+    color: #fff;
+    margin-bottom: 4.2rem;
+    h1 {
+        margin-bottom: 3rem;
+        position: relative;
+        top: 10px;
+    }
+    p {
+        font-family: $font-family-logo;
+        font-weight: 300;
+        color: #666;
+        font-size: .9rem;
+        margin-bottom: 1.6rem;
+    }
+}
+
+.footer__section_logo h1 {
+    font-family: $font-family-logo;
+    font-weight: 300;
+    color: #45b0e3;
+    display: inline-block;
+    margin-left: .5rem;
+    top: -10px;
+    margin-bottom: 1.9rem;
+}
+
+.footer__section_logo span {
+    float: left;
+    margin-right: .15rem;
+}
+
+.group-icons::before { content: url(/dist/group-icons.png); }
+
+input[type="email"] {
+    background-color: #333;
+    border: none;
+    padding: 1.2rem;
+    width: 60%;
+    font-family: $font-family-2;
+    color: #fff;
+}
+
+input[type="button"] {
+    background-color: #4d4382;
+    color: #fff;
+    border: none;
+    padding: 1.2rem;
+    float: right;
+    width: 40%;
+    font-family: $font-family-2;
+    &:hover { cursor: pointer; }
+}
+
+.footer__section_tags-widget li {
+    list-style-type: none;
+    font-family: $font-family-2;
+    font-size: .7rem;
+    color: #666;
+    display: inline-block;
+    background-color: #333;
+    padding: .4rem;
+    margin-right: .3rem;
+    margin-bottom: .3rem;
+    &:hover {
+        background-color: #4d4382;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.rss-icon::before { content: url(/dist/rss-icon.png); }
+
+.facebook-icon::before { content: url(/dist/facebook-icon.png); }
+
+.twitter-icon::before { content: url(/dist/twitter-icon.png); }
+
+.dribble-icon::before { content: url(/dist/dribble-icon.png); }
+
+.linkedin-icon::before { content: url(/dist/linkedin-icon.png); }
+
+.youtube-icon::before { content: url(/dist/youtube-icon.png); }
+
+.skype-icon::before { content: url(/dist/skype-icon.png); }
+
+hr {
+    clear: both;
+}

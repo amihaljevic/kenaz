@@ -28,9 +28,7 @@
     width: 30.3%;
     margin-left: 1.3rem;
     vertical-align: top;
-    &:first-of-type {
-        margin-left: 0;
-    }
+    &:first-of-type { margin-left: 0; }
 }
 
 .panel__item_small {
@@ -39,19 +37,14 @@
     margin-left: 1rem;
     margin-bottom: 1rem;
     vertical-align: top;
-    &:nth-child(2n) {
-        margin-left: 0;
-    }
+    &:nth-child(2n) { margin-left: 0; }
 }
 
 .panel__item_carousel {
     display: inline-block;
     width: 46%;
-    //margin-left: 2rem;
     vertical-align: top;
-    &:first-of-type {
-        margin-left: 0;
-    }
+    &:first-of-type { margin-left: 0; }
     //neće valjat kasnije
     &:last-of-type {
         float: right;

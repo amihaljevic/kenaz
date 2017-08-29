@@ -6,7 +6,8 @@
 @import "_navbar";
 @import "_panel";
 @import "_banner";
-@import "_aside.scss";
+@import "_aside";
+@import "_footer";
 
 * {
     box-sizing: border-box;
@@ -31,16 +32,9 @@ body {
     @include grid-collapse;
 }
 
-.main-left {
-    @include grid-column(8, (columns: 12, gutter: 0px));
-    
-}
+.main-left { @include grid-column(8, (columns: 12, gutter: 0px)); }
 .main-right {
     @include grid-column(4, (columns: 12, gutter: 0px));
     margin-left: -20px;
     width: calc((4/12 * 100%) + 20px);
-}
-
-footer {
-    @include grid-column(12);
 }

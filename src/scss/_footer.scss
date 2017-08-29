@@ -6,6 +6,18 @@ footer {
     width: 100%;
     margin-left: 0;
     padding: 4.2rem 0;
+    position: relative;
+    &::before {
+       content: "";
+       background-color: #252525;
+       position: absolute;
+       z-index: -1;
+       top: -20px;
+       bottom: 0;
+       left: -100%;
+       right: -100%;
+       border-top: 20px solid #4d4382;
+    }
 }
 
 .logo-black-icon { display: inline-block; }
@@ -18,6 +30,7 @@ footer {
         margin-bottom: 3rem;
         position: relative;
         top: 10px;
+        color: #ccc;
     }
     p {
         font-family: $font-family-logo;
@@ -96,6 +109,40 @@ input[type="button"] {
 
 .skype-icon::before { content: url(/dist/skype-icon.png); }
 
+.footer__item {
+    padding: 1.9rem 0;
+    border-bottom-color: #323232;
+    &:first-of-type { padding-top: 0; }
+    &:last-of-type { border: none; }
+    &:hover { background-color: #252525; }
+    p { margin-bottom: 0; }
+    h2 { color: #ccc; }
+    .aside__menu_item_info { width: 70%; }
+}
+
+.footer__section_featured h1 { color: #fff; }
+
 hr {
     clear: both;
+    width: 100%;
+    border: 1px solid #333;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    font-family: $font-family-2;
+    color: #898989;
+    font-size: .7rem;
+    float: left;
+}
+
+.site-map {
+    font-family: $font-family-2;
+    font-size: .7rem;
+    color: #898989;
+    float: right;
+    li {
+        display: inline-block;
+        list-style-type: "-";
+    }
 }

@@ -5,11 +5,21 @@
     height: 120px;
     background-color: #fff;
     border: 2px solid #eee;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .banner_size_l {
     width: 940px;
     margin-left: 0;
+    margin-bottom: 10px;
+    &:first-of-type {
+        margin-top: 20px;
+    }
+    &:last-of-type {
+        margin-top:10px;
+        margin-bottom: 20px;
+    }
 }
 
 .banner__container {

@@ -45,10 +45,6 @@
     width: 46%;
     vertical-align: top;
     &:first-of-type { margin-left: 0; }
-    //neće valjat kasnije
-    &:last-of-type {
-        float: right;
-    }
 }
 
 .panel__item_small figure {

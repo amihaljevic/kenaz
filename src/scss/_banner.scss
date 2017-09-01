@@ -27,6 +27,7 @@
     background-color: #ddd;
     padding: 1.3rem;
     margin-bottom: 1.9rem;
+    @media ($desktop-to-tablet) { display: none; }
 }
 
 .banner_size_s {

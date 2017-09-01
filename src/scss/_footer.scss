@@ -39,6 +39,10 @@ footer {
         font-size: .9rem;
         margin-bottom: 1.6rem;
     }
+    &:nth-child(4n) { clear: both; }
+    @media ($tablet) {
+        @include grid-column(12);
+    }
 }
 
 .footer__section_logo h1 {
@@ -54,6 +58,9 @@ footer {
 .footer__section_logo span {
     float: left;
     margin-right: .15rem;
+    @media ($tablet) {
+        float: none;
+    }
 }
 
 .group-icons::before { content: url(/dist/group-icons.png); }
@@ -112,6 +119,7 @@ input[type="button"] {
 .footer__item {
     padding: 1.9rem 0;
     border-bottom-color: #323232;
+    width: 100%;
     &:first-of-type { padding-top: 0; }
     &:last-of-type { border: none; }
     &:hover { background-color: #252525; }
@@ -120,7 +128,12 @@ input[type="button"] {
     .aside__menu_item_info { width: 70%; }
 }
 
-.footer__section_featured h1 { color: #fff; }
+.footer__section_featured {
+    h1 { color: #fff; }
+    @media ($tablet) {
+        display: none;
+    }
+}
 
 hr {
     clear: both;
@@ -134,6 +147,10 @@ hr {
     color: #898989;
     font-size: .7rem;
     float: left;
+    @media ($tablet-to-mobile) {
+        text-align: center;
+        float: none;
+    }
 }
 
 .site-map {
@@ -145,5 +162,9 @@ hr {
     a {
         text-decoration: none;
         color: #898989;
+    }
+    @media ($tablet-to-mobile) {
+        text-align: center;
+        float: none;
     }
 }

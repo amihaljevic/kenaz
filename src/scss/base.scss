@@ -27,7 +27,15 @@ body {
 
 .container {
     width: 940px;
+    min-width: 320px;
     margin: 0 auto;
+}
+
+@media ($desktop-to-tablet) {
+    .container {
+        width: 98%;
+        margin: 0 1%;
+    }
 }
 
 .grid-container {
@@ -35,9 +43,20 @@ body {
     @include grid-collapse;
 }
 
-.main-left { @include grid-column(8, (columns: 12, gutter: 0px)); }
+.main-left {
+    @include grid-column(8, (columns: 12, gutter: 0px));
+    @media ($desktop-to-tablet) {
+        @include grid-column(12, (columns: 12, gutter: 0px));
+        margin-bottom: 10px;
+    }
+}
 .main-right {
     @include grid-column(4, (columns: 12, gutter: 0px));
     margin-left: -20px;
     width: calc((4/12 * 100%) + 20px);
+    @media ($desktop-to-tablet) {
+        @include grid-column(12, (columns: 12, gutter: 0px));
+        margin-left: 0;
+        width: 100%;
+    }
 }

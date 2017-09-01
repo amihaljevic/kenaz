@@ -21,6 +21,9 @@
 .panel__small-carousel {
     @include grid-column(6);
     border-left-color: $color-small-carousel;
+    @media ($tablet-to-mobile) {
+        @include grid-column(12);
+    }
 }
 
 .panel__item {
@@ -38,6 +41,10 @@
     margin-bottom: 1rem;
     vertical-align: top;
     &:nth-child(2n) { margin-left: 0; }
+    @media ($tablet-to-mobile) {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 .panel__item_carousel {
@@ -45,6 +52,9 @@
     width: 46%;
     vertical-align: top;
     &:first-of-type { margin-left: 0; }
+    @media ($tablet-to-mobile) {
+        width: 100%;
+    }
 }
 
 .panel__item_small figure {
@@ -53,6 +63,7 @@
     position: relative;
     float: left;
     overflow: hidden;
+    @media ($tablet-to-mobile) { width: 35%; }
 }
 
 .panel img {
@@ -107,11 +118,17 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    @media ($tablet-to-mobile) {
+        position: initial;
+        left: 0;
+        transform: none;
+    }
 }
 
 .panel__item_info {
     width: 48%;
     float: right;
+    @media ($tablet-to-mobile) { width: 65%; }
 }
 
 .left-arrow-yellow::before { content: url(/dist/left-arrow-yellow.png); }

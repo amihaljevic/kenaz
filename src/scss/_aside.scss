@@ -176,3 +176,24 @@
     @include grid-column(12);
     @media ($desktop-to-tablet) { display: none !important; } 
 }
+
+#cityToday, #cityTomorrow {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    vertical-align: middle;
+}
+
+#temperatureToday, #temperatureTomorrow {
+    text-align: center;
+    font-family: $font-family-2;
+    font-weight: 200;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#descriptionToday, #descriptionTomorrow {
+    text-align: center;
+    font-family: $font-family-logo;
+    font-size: 0.8rem;
+}

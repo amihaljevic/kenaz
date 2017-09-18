@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <h2 data-title>tseadasrawdasd</h2>
+    <script>
+        // Code goes here
+
+function makePost(title, body) {
+  return '<article><h1>' + title + '</h1><p>' + body + '</p></article>';
+}
+
+function makeError(code) {
+	return '<article><h1>Error: '
+    + code
+    + '</h1><p>An error has occurred.</p></article>';
+}
+
+var req = new XMLHttpRequest();
+req.open('GET', 'https://www.24sata.hr/feeds/aktualno.xml');
+req.addEventListener('load', onLoad);
+req.send();
+
+
+
+function onLoad() {
+  var xml = req.responseXML;
+
+  this.responseXML.querySelectorAll('item')
+    .forEach(function(value) {
+      var title = '';
+      var pubDate = '';
+
+      var titles = value.getElementsByTagName("title");
+      if (titles && titles.length > 0) {
+        title = titles[0].innerHTML;
+      }
+
+      var pubDates = value.querySelectorAll("pubDate");
+      if (pubDates && pubDates.length > 0) {
+        pubDate = pubDates[0].innerHTML;
+      }
+
+      var titleHeader = document.createElement("h2");
+      titleHeader.textContent = title;
+
+      var dateHolder = document.createElement("p");
+      dateHolder.textContent = pubDate;
+
+      document.body.appendChild(titleHeader);
+      document.body.appendChild(dateHolder);
+
+      var h2 = document.querySelector('[data-title]');
+      h2.textContent = title;
+    });
+/*  var responseHtml = '';
+  if (this.status === 200) {
+    var response = JSON.parse(this.responseText);
+    responseHtml = makePost(response.title, response.body);
+  } else {
+    responseHtml = makeError(this.status);
+  }
+  document.body.innerHTML += responseHtml;*/
+}
+</script>
+</body>
+</html>

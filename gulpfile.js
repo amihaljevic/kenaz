@@ -9,6 +9,7 @@ var browsersync = require('browser-sync').create();
 var watch = require('gulp-watch');
 var sass = require('gulp-sass');
 var neat = require('node-neat');
+var handlebars = require('handlebars');
 
 gulp.task('scss', function() {
     return gulp.src('src/scss/base.scss')

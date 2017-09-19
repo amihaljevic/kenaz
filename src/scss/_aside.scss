@@ -89,11 +89,11 @@
     transform: translateX(-50%);
 }
 
-.facebook-transparent-icon::before { content: url(/dist/facebook-transparent-icon.png); }
+.facebook-transparent-icon::before { content: url(/dist/icons/facebook-transparent-icon.png); }
 
-.twitter-transparent-icon::before { content: url(/dist/twitter-transparent-icon.png); }
+.twitter-transparent-icon::before { content: url(/dist/icons/twitter-transparent-icon.png); }
 
-.youtube-transparent-icon::before { content: url(/dist/youtube-transparent-icon.png); }
+.youtube-transparent-icon::before { content: url(/dist/icons/youtube-transparent-icon.png); }
 
 .aside__social {
     @include grid-column(12);

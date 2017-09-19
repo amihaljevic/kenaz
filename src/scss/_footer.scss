@@ -63,7 +63,7 @@ footer {
     }
 }
 
-.group-icons::before { content: url(/dist/group-icons.png); }
+//.group-icons::before { content: url(/dist/group-icons.png); }
 
 input[type="email"] {
     background-color: #333;
@@ -102,19 +102,19 @@ input[type="button"] {
     }
 }
 
-.rss-icon::before { content: url(/dist/rss-icon.png); }
+.rss-icon::before { content: url(/dist/icons/rss-icon.png); }
 
-.facebook-icon::before { content: url(/dist/facebook-icon.png); }
+.facebook-icon::before { content: url(/dist/icons/facebook-icon.png); }
 
-.twitter-icon::before { content: url(/dist/twitter-icon.png); }
+.twitter-icon::before { content: url(/dist/icons/twitter-icon.png); }
 
-.dribble-icon::before { content: url(/dist/dribble-icon.png); }
+.dribble-icon::before { content: url(/dist/icons/dribble-icon.png); }
 
-.linkedin-icon::before { content: url(/dist/linkedin-icon.png); }
+.linkedin-icon::before { content: url(/dist/icons/linkedin-icon.png); }
 
-.youtube-icon::before { content: url(/dist/youtube-icon.png); }
+.youtube-icon::before { content: url(/dist/icons/youtube-icon.png); }
 
-.skype-icon::before { content: url(/dist/skype-icon.png); }
+.skype-icon::before { content: url(/dist/icons/skype-icon.png); }
 
 .footer__item {
     padding: 1.9rem 0;

@@ -109,7 +109,7 @@
    clear: right;
 }
 
-.comment-icon::before { content: url(/dist/comment-icon.png); }
+.comment-icon::before { content: url(/dist/icons/comment-icon.png); }
 
 .panel__item_small img {
     width: auto;
@@ -131,13 +131,13 @@
     @media ($tablet-to-mobile) { width: 65%; }
 }
 
-.left-arrow-yellow::before { content: url(/dist/left-arrow-yellow.png); }
+.left-arrow-yellow::before { content: url(/dist/icons/left-arrow-yellow.png); }
 
-.right-arrow-yellow::before { content: url(/dist/right-arrow-yellow.png); }
+.right-arrow-yellow::before { content: url(/dist/icons/right-arrow-yellow.png); }
 
-.left-arrow-brown::before { content: url(/dist/left-arrow-brown.png); }
+.left-arrow-brown::before { content: url(/dist/icons/left-arrow-brown.png); }
 
-.right-arrow-brown::before { content: url(/dist/right-arrow-brown.png); }
+.right-arrow-brown::before { content: url(/dist/icons/right-arrow-brown.png); }
 
 .panel__arrow_left {
     position: absolute;

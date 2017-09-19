@@ -29,12 +29,12 @@
 
 .left-arrow {
     left: 1.9rem;
-    &::before { content: url(/dist/left-arrow.png); }
+    &::before { content: url(/dist/icons/left-arrow.png); }
 }
 
 .right-arrow {
     right: 1.9rem;
-    &::before { content: url(/dist/right-arrow.png); }
+    &::before { content: url(/dist/icons/right-arrow.png); }
 }
 
 .left-arrow, .right-arrow {
@@ -83,9 +83,17 @@
         border: 1px solid #fff;
         padding: .4rem .9rem;
     }
+    figure {
+        overflow: hidden;
+    }
+}
+
+.wrapper--img {
+    width: 100%;
+    height: auto;
 }
 
 .comment-icon-white {
     vertical-align: middle;
-    &::before { content: url(/dist/comment-icon-white.png); }
+    &::before { content: url(/dist/icons/comment-icon-white.png); }
 }

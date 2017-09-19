@@ -19,10 +19,10 @@ gulp.task('scss', function() {
         grid: true
     }))
     //.pipe(rename('style.css'))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('dist/css/'))
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('bs-reload-scss', ['scss'], function(done) {
@@ -33,10 +33,10 @@ gulp.task('bs-reload-scss', ['scss'], function(done) {
 gulp.task('js', function() {
     return gulp.src('src/js/**')
     .pipe(concat('script.bundle.js'))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('dist/js/'))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('bs-reload-js', ['js'], function(done) {
@@ -47,10 +47,21 @@ gulp.task('bs-reload-js', ['js'], function(done) {
 gulp.task('img', function() {
     return gulp.src('src/img/**')
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/img/'));
 });
 
 gulp.task('bs-reload-img', ['img'], function(done) {
+    browsersync.reload();
+    done();
+});
+
+gulp.task('icon', function() {
+    return gulp.src('src/icons/**')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/icons/'));
+});
+
+gulp.task('bs-reload-icon', ['icon'], function(done) {
     browsersync.reload();
     done();
 });
@@ -65,8 +76,9 @@ gulp.task('bs', function() {
     gulp.watch("src/scss/**", ['bs-reload-scss']);
     gulp.watch("src/js/**", ['bs-reload-js']);
     gulp.watch("src/img/**", ['bs-reload-img']);
+    gulp.watch("src/icons/**", ['bs-reload-icon']);
     gulp.watch("**.html").on("change", browsersync.reload);
 });
 
-gulp.task('default', ['scss', 'js', 'img']);
-gulp.task('serve', ['scss', 'js', 'img', 'bs']);
+gulp.task('default', ['scss', 'js', 'img', 'icon']);
+gulp.task('serve', ['scss', 'js', 'img', 'icon', 'bs']);

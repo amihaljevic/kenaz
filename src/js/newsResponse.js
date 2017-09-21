@@ -89,7 +89,7 @@ xhr.onload = function() {
     for (var i = 0; i < articles.length; i++) {
         var article = articles[i];
         var post = posts[i];
-        article.getElementsByClassName("wrapper--title")[0].innerHTML = post.title;
+        article.getElementsByClassName("wrapper--title")[0].innerHTML = ellipsize(post.title, 65, "...");
         article.getElementsByClassName("wrapper--pubDate")[0].innerHTML = post.pubDate;
         article.getElementsByClassName("wrapper--link")[0].setAttribute("href", post.link);
         article.getElementsByClassName("wrapper--img")[0].setAttribute("src", post.image);

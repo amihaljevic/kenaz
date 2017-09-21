@@ -31,7 +31,7 @@ gulp.task('bs-reload-scss', ['scss'], function(done) {
 });
 
 gulp.task('js', function() {
-    return gulp.src('src/js/**')
+    return gulp.src(['src/js/truncateText.js', 'src/js/**'])
     .pipe(concat('script.bundle.js'))
     .pipe(gulp.dest('dist/js/'))
     .pipe(uglify())

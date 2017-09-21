@@ -104,3 +104,7 @@ function lerp(start, end, step) {
     step = EasingFunctions.easeInOutCubic(step);
     return (1 - step) * start + step * end;
 }
+
+window.addEventListener("resize", function() {
+    articleWidth = mainCarousel.getBoundingClientRect().width;
+});

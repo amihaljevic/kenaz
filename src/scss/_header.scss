@@ -118,7 +118,7 @@
 #menu--toggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #2323ff;
+    background: #cdcdcd;
     &:nth-last-child(3) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
@@ -132,7 +132,7 @@
 #menu {
     position: absolute;
     width: 300px;
-    margin: -100px 0 0 500px;
+    margin: -100px 0 0 50px;
     padding: 50px;
     padding-top: 125px;
     background: #ededed;
@@ -148,6 +148,6 @@
 }
 
 #menu--toggle input:checked ~ ul {
-    transform: scale(1.5, 1.0);
+    transform: translateX(-300px);
     opacity: 1;
 }

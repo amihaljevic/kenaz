@@ -45,13 +45,6 @@
     transform: translateY(-50%);
 }
 
-.wrapper article {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    position: relative;
-}
-
 .wrapper--info {
     position: absolute;
     bottom: 0;
@@ -96,4 +89,23 @@
 .comment-icon-white {
     vertical-align: middle;
     &::before { content: url(/dist/icons/comment-icon-white.png); }
+}
+
+.wrapper article {
+    //width: 100%;
+    //height: 100%;
+    //display: inline-block;
+    //position: relative;
+}
+
+.main-carousel__window {
+    height: inherit;
+    width: 400%;
+
+    article {
+        width: 25%;
+        height: 100%;
+        display: inline-block;
+        float: left;
+    }
 }
